@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <!-- DON'T ADD JQUERY IF IT'S ALREADY THERE ^^ -->
+
+    <script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js"></script>
+    <!-- ADD THIS LIBRARY AFTER JQUERY ONE ^^^-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.min.css">
+    <!-- ADD THIS CSS LIBRARY TOO ^^^-->
+</head>
+<body>
+    <style>
+    .white-popup {
+        position: relative;
+        width: auto;
+        max-width: 500px;
+        margin: 20px auto;
+    }
+    .white-popup .mfp-close{   
+        width: 64px;
+        height: 64px;
+    }
+    .white-popup img {
+        width: 100%;
+    }
+    </style>
+    <!-- ADD data-open-popup -->
+    <div class="open-popup" data-mfp-src="#popup">Open</div>
+
+    <div id="popup" class="white-popup mfp-hide">
+        <a href="https://wolfsdorf.com/wrapid/">
+            <img src="https://trello-attachments.s3.amazonaws.com/5d5f771354858541b5691001/435x357/02407a1c4d55b3c05bb0d1a6f5a8aef8/wolfsdorf-popup.jpg" alt="">
+        </a> 
+    </div>
+    <script>
+        $(function(){
+            $('.open-popup').magnificPopup({
+                type:'inline',
+                midClick: true
+            })
+        })
+    </script>
+</body>
+</html>
